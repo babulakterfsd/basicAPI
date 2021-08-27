@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Push data and show data</title>
+</head>
+<body>
+
+<div class="container" id="user">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-center my-3">Input Your Data</h2>
+            <div class="input-container d-flex justify-content-center" id="inputcontainer">
+                <div class="name me-2">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" class=" form-control">
+                </div>
+                <div class="position me-2">
+                    <label for="position">Your Position</label>
+                    <input type="text" id="position" class=" form-control">
+                </div>
+                <div class="salary">
+                    <label for="salary">Your Salary</label>
+                    <input type="number" id="salary" class="form-control">
+                </div>
+            </div>
+            <button id="submit" class="btn btn-success d-block mx-auto mt-2 px-5 py-2">Submit</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="container" id="showdata">
+    <div class="row">
+        <div class="col-12 mt-5">
+           <ul id="myul">
+
+           </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="./push.js"></script>
+</body>
+</html>
