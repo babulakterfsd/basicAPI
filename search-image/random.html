@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Show random image depending on search query</title>
+    <style>
+        img:hover {
+           transform: scale(.9);
+           transition: .5s;
+        }
+    </style>
+</head>
+<body>
+
+<!-- once images are loaded, without page refresh I cant search again. need to improve this -->
+
+<!-- Show a random image on per click-->
+<div class="container" id="show-random-image">
+    <div class="row">
+        <h2 class="text-center mt-5">Search your desired image here</h2>
+        <div class="col-12 d-flex justify-content-center">
+            <input type="text" id="sQuery" class="w-25 me-2 form-control">
+            <button class="btn btn-success" id="search">Search Image</button>
+        </div>
+        <div class="col-12 pb-3">
+            <div id="imgcontainer" class="d-flex justify-content-center flex-wrap">
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="./random.js"></script>
+</body>
+</html>
