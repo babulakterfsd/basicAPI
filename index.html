@@ -5,52 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            color: darkgreen;
+            background-color: darkgrey;
+        }
+        a:hover {
+            color: rgb(145, 114, 142)
+        }
+    </style>
     <title>Some basic API with core js</title>
 </head>
 <body>
 
-<!-- Show a random image on per click-->
-<div class="conatiner" id="show-random-image">
+<div class="container">
     <div class="row">
-        <div class="col-md-3">
-            <input type="text" id="dQuery">
-            <button class="btn btn-success" id="post">Post</button>
-        </div>
-        <div class="col-md-9">
-            <div id="imgcontainer">
-
-            </div>
+        <div class="col-12 d-flex flex-wrap justify-content-center">
+            <a target="_blank" href="./search-image/random.html" class="d-block m-5 p-5 w-50 text-lg-center">Search Random Images</a>
+            <a target="_blank" href="./push/push.html" class="d-block m-5 p-5 w-50 text-center">Push Data in the Server and show in UI</a>
         </div>
     </div>
 </div>
 
-<!-- show pushed data in LI -->
-<div class="conatainer">
-    <div class="row">
-        <div class="col-md-6">
-           <button id="push" class="btn btn-success">Push</button>
-        </div>
-        <div class="col-md-6">
-           <ul id="myul">
-
-           </ul>
-        </div>
-    </div>
-</div>
-
-<!-- mock api data testing -->
-<button id="mock" class="btn btn-danger">mock data</button>
-<div id="mockcontainer">
-    
-</div>
-
-
-
-
-
-
-
-
-<script src="./main.js"></script>
 </body>
 </html>
