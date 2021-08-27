@@ -31,6 +31,6 @@ function createImage(imgsrc) {
     myImage.style.margin = '10px';
     myImage.style.transition = '.5s';
     myImage.setAttribute('src', imgsrc)
-    imgParent.appendChild(myImage)
+    imgParent.appendChild(myImage);
     return imgParent;
 }
