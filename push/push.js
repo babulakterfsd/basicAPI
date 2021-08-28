@@ -37,6 +37,9 @@ document.getElementById('submit').addEventListener('click', () => {
             }
         }
      })
+     document.getElementById('name').value = ''
+     document.getElementById('position').value = ''
+     document.getElementById('salary').value = ''
 })
 
 //li generator 

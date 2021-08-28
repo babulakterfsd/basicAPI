@@ -20,6 +20,8 @@ document.getElementById('search').addEventListener('click', () => {
             })
           }
      })
+     sQuery.value = ''
+     document.getElementById('imgcontainer').textContent = ''
 })
 
 function createImage(imgsrc) {
