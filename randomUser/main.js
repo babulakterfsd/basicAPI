@@ -57,9 +57,9 @@ function displayLocationData() {
     li.innerHTML = 
                    `
                      postcode : ${singleUser.location.postcode} ${singleUser.name.first} ${singleUser.name.last} <br/>
-                     gender : ${singleUser.gender} <br/>
-                     email : ${singleUser.email} <br/>
-                     phone : ${singleUser.phone}
+                     city : ${singleUser.location.city} <br/>
+                     state : ${singleUser.location.state} <br/>
+                     country : ${singleUser.location.country}
                    `
     ul.appendChild(li);
     const h4 = document.createElement('h4');
