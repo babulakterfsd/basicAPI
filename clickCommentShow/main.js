@@ -8,7 +8,6 @@ async function getData() {
         const firstTenComments = comments.splice(0,10);
         commentsArray = firstTenComments;
         createComment(commentsArray);
-        console.log(commentsArray);
     } catch (error) {
         console.log(error.message);
     }
@@ -35,10 +34,26 @@ commentAddButton.addEventListener('click', () => {
 })
 
 //show detailed comment
+// document.getElementById('table-body').addEventListener('click', (event) => {
+//     for(let i = 0; i < commentsArray.length; i++) {
+//         if(commentsArray[i].id == event.target.innerText || commentsArray[i].name == event.target.innerText) {
+//              document.getElementById('details').innerText = commentsArray[i].body
+//         }
+//     }
+// })
+//show detailed comment dynamically
 document.getElementById('table-body').addEventListener('click', (event) => {
     for(let i = 0; i < commentsArray.length; i++) {
         if(commentsArray[i].id == event.target.innerText || commentsArray[i].name == event.target.innerText) {
-             document.getElementById('details').innerText = commentsArray[i].body
+             const id = commentsArray[i].id;
+             const commentUrl = `https://jsonplaceholder.typicode.com/comments?id=${id}`;
+
+             async function showComment() {
+                 const commentData = await fetch(commentUrl);
+                 const specificComment = await commentData.json();
+                 document.getElementById('details').innerText = specificComment[0].body
+             }
+             showComment()
         }
     }
 })
