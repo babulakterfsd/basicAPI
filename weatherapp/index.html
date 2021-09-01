@@ -14,13 +14,18 @@
             background-size: cover;
             background-position: center center;
             color: white;
+            overflow-x: hidden;
         }
         #weather {
             background: #000;
             min-height: 100ch;
             min-width: 100vw;
             overflow: hidden;
-            opacity: .9;
+            opacity: .7;
+        }
+        p{
+            margin: 0px 0px 5px 0px;
+            border-top: 2px solid #ddd;
         }
     </style>
 </head>
@@ -43,37 +48,31 @@
         <div class="row">
             <div class="col-12 mx-auto">
                 <img id="icon-image" src="" alt="" class="d-block mx-auto">
+                <span id="report" class="d-none text-center mx-auto p-2 my-4 fw-bolder bg-secondary rounded w-25"></span>
             </div>
         </div>
         <div class="row text-success text-center mt-3 d-flex justify-content-evenly align-items-center">
-            <div class="col-3">
+            <div class="col-md-4 mb-2">
                 <div class="card border-0">
                     <h4 class="text-center text-success">Location</h4>
-                    <p>City: <span id="city-name"></span></p>
-                    <p>Country: <span id="country"></span></p>
+                    <p>City: <span id="city-name" class="fw-bold text-danger"></span></p>
+                    <p>Country: <span id="country"  class="fw-bold text-danger"></span></p>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-md-4 mb-2">
                 <div class="card border-0">
                 <h4 class="text-center text-success">Temperature</h4>
-                <p>Temp: <span id="temp"></span></p>
-                <p>Feels Like: <span id="feels-like"></span></p>
-                <p>Humidity: <span id="humidity"></span></p>
+                <p>Temp is <span id="temp" class="fw-bold text-danger"></span> Degree Celcious Now</p>
+                <p>But It Feels Like <span id="feels-like"  class="fw-bold text-danger"></span> degree celcious</p>
+                <p>Humidity is <span id="humidity"  class="fw-bold text-danger"></span></p>
                 </div>
             </div>
-            <div class="col-3">
-                <div class="card border-0">
-                <h4 class="text-center text-success">Sun info</h4>
-                <p>sunrise: <span id="sunrise"></span></p>
-                <p>sunset: <span id="sunset"></span></p>
-                </div>
-            </div>
-            <div class="col-3">                
+            <div class="col-md-4">                
                 <div class="card border-0">
                 <h4 class="text-center text-success">Wind info</h4>
-                <p>pressure: <span id="pressure"></span></p>
-                <p>deg: <span id="deg"></span></p>
-                <p>speed: <span id="speed"></span></p>
+                <p>Atmospheric Pressure is <span id="pressure"  class="fw-bold text-danger"></span> Now</p>
+                <p>Wind blows In <span id="deg"  class="fw-bold text-danger"></span> Degree Angle Now</p>
+                <p>Wind Speed Is <span id="speed"  class="fw-bold text-danger"></span> km/hour</p>
                 </div>
             </div>
         </div>
