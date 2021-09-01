@@ -40,7 +40,11 @@ const getWeather = async () => {
         displayWeatherData(weatherData);
         error.classList.add('d-none')
     } else {
-        alert('you have not given proper city name')
+        alert('you have not given proper city name');
+        weatherReport.textContent = ''
+        iconImage.removeAttribute('src');
+        iconImage.style.height = '0px'
+        iconImage.style.width = '0px'
     }
     } catch (error) {
         console.log(error.message);
